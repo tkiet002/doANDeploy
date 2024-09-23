@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { Sequelize } = require("sequelize");
+const { mysql2 } = require("mysql2");
 const app = express();
 const port = 3001;
 
