@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     user_answer_at: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: true,
       defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     }
