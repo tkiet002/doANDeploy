@@ -8,10 +8,10 @@ const port = 3001;
 app.use(express.json());
 app.use(cors());
 
-// const sequelize = new Sequelize("QUIZTHIS", "root", "namromss4//123", {
-//   host: "localhost",
-//   dialect: "mysql",
-// });
+const sequelize = new Sequelize("b7zwxamvhebjpeh8b2vv", "u1mf5n0vq1vil1dy", "JOumBvjmuH4jQ6OUFuVe", {
+  host: "b7zwxamvhebjpeh8b2vv-mysql.services.clever-cloud.com",
+  dialect: "mysql",
+});
 
 
 
