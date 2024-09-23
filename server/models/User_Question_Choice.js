@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
+
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('User_Question_Choice', {
     user_id: {
-      autoIncrement: false,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     user_answer_at: {
       type: DataTypes.DATEONLY,
       allowNull: true,
-      defaultValue: Sequelize.Sequelize.fn('curdate')
+      defaultValue: Sequelize.literal('CURDATE()')
     }
   }, {
     sequelize,
@@ -36,16 +36,18 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "user_id" },
-          { name: "choice_id" },
+          { name: "choice_id" }
         ]
       },
       {
-        name: "FK_USER_QUESTION_CHOICE_QUESTION_CHOICE",
+        name: "User_Question_Choice_user_id_choice_id_unique",
+        unique: true,
         using: "BTREE",
         fields: [
-          { name: "choice_id" },
+          { name: "user_id" },
+          { name: "choice_id" }
         ]
-      },
+      }
     ]
   });
 };
