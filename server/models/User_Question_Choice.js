@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     user_answer_at: {
       type: DataTypes.DATEONLY,
       allowNull: true,
-      defaultValue: Sequelize.literal('CURDATE()')
+      defaultValue: Sequelize.fn('CURDATE')
     }
   }, {
     sequelize,
