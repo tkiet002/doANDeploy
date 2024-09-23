@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('User_Question_Choice', {
     user_id: {
-      autoIncrement: true,
+      autoIncrement: false,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
