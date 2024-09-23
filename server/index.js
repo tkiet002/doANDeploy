@@ -32,8 +32,17 @@ sequelize.authenticate().then(() => {
 
 
  const lessonRouter = require("./routes/Lesson");
+const router = require("./routes/Users");
  app.use("/lesson", lessonRouter);
 
+
+ const hello = () =>{
+  router.get("/", async (req, res) => {
+  
+    res.json("Hello world!");
+  });
+ }
+ app.use("/world", hello);
  
  //end router
 db.sequelize.sync().then(() => {

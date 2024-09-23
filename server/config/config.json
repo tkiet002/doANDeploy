@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "namromss4//123",
-    "database": "QUIZTHIS",
-    "host": "localhost",
+    "username": "u1mf5n0vq1vil1dy",
+    "password": "JOumBvjmuH4jQ6OUFuVe",
+    "database": "b7zwxamvhebjpeh8b2vv",
+    "host": "b7zwxamvhebjpeh8b2vv-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "test": {
